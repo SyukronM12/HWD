@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Registrasi Akun
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none">
+    <ion-label position="floating">Nama Lengkap</ion-label>
+    <ion-input [(ngModel)]="info.fullname"  type="text" placeholder="Pablo Esdoger"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="info.email" type="email" placeholder="pabloxxxx@esdoger.com"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="info.password" type="password" placeholder="xxxxxxx"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="floating">Nomor Handphone</ion-label>
+    <ion-input [(ngModel)]="info.nohp" type="tel" placeholder="081234567890"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date of Birth</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" placeholder="Select your date of birth"></ion-datetime>
+  </ion-item >
+</ion-content>
+  <ion-list>
+  <ion-radio-group>
+    <ion-item>Jenis Kelamin</ion-item>
+    <ion-item lines="none">
+      <ion-label>Laki-laki</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Perempuan</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+  <ion-button color="success" expand="block" (click)="saveData()" expand="block">Submit</ion-button>
+  <ion-button color="warning" expand="block" (click)="scorePage()" expand="block">Score Apps</ion-button>
+
+  
